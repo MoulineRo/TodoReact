@@ -8,7 +8,7 @@ const TodoItems = ({task, handleCompleted, deleteTask}) => {
 
     return (
         <div className={!task.completed ? "list-row-checked" : "list-row"}>
-            <Checkbox onChange={handleCompleted} onClick={(e) => handleCompleted(e, task.id)}/>
+            <Checkbox onClick={(e) => handleCompleted(e, task.id)}/>
             <div>{task.text}</div>
             <IconButton aria-label="delete" color="error" onClick={(e) => deleteTask(task.id)}>
                 <DeleteIcon/>
